@@ -230,12 +230,12 @@ body {
 .gridContainer {
     display: grid;
     width: 100%;
-    grid-template-rows: 5rem 7rem 1fr;
+    grid-template-rows: 5rem 7rem minmax(1fr, auto);
     grid-template-columns: 20rem 1fr;
 }
 
 nav {
-    grid-area: 1 / 1 / -1 / 2;
+    grid-area: 1 / 1 / 4 / 2;
     background-color: var(--color-background);
     display: grid;
     gap: var(--gap-medium);
@@ -245,7 +245,7 @@ nav {
 }
 
 header {
-    grid-area: 1 / 2 / 2 / -1;
+    grid-area: 1 / 2 / 2 / 3;
     display: grid;
     gap: var(--gap-medium);
     padding: var(--padding-medium);
@@ -254,7 +254,7 @@ header {
 }
 
 section {
-    grid-area: 2 / 2 / 3 / -1;
+    grid-area: 2 / 2 / 3 / 3;
     display: grid;
     gap: var(--gap-medium);
     padding: var(--padding-medium);
@@ -263,7 +263,7 @@ section {
 }
 
 main {
-    grid-area: 3 / 2 / -1 / -1;
+    grid-area: 3 / 2 / 3 / 4;
     display: grid;
     gap: var(--gap-large);
     grid-template-rows: 1fr 1fr;
@@ -276,7 +276,7 @@ main {
     grid-area: 1 / 1 / 3 / 2;
     display: grid;
     gap: var(--gap-medium);
-    grid-template-rows: 2rem repeat(auto-fit, 20rem);
+    grid-template-rows: 2rem repeat(auto-fit, auto);
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
@@ -290,6 +290,7 @@ main {
     box-shadow: 3px 3px 3px color-mix(in srgb, var(--color-background-secondary) 50%, black 20%);
     background-color: white;
     border-radius: 10px;
+    min-height: 10rem;
 }
 
 .announcements {
@@ -301,7 +302,7 @@ main {
 }
 
 .trending {
-    grid-area: 2 / 2 / -1 / -1;
+    grid-area: 2 / 2 / 3 / 3;
     display: grid;
     gap: var(--gap-medium);
     grid-template-rows: 2rem 1fr;
